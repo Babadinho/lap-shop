@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LaptopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/page', [IndexController::class, 'page']);
+
+// Route::resource('laptop', LaptopController::class) ->only(['index', 'show', 'create', 'store']);
+// Route::resource('laptop', LaptopController::class) ->except(['destroy']);
+Route::resource('laptop', LaptopController::class);

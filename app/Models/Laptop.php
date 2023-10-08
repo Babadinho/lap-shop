@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Laptop extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['brand', 'model', 'processor', 'ram', 'storage', 'graphics_card', 'condition', 'features', 'price'];
 }
