@@ -1,6 +1,6 @@
 <template>
   <span>
-    {{ laptop.model }} {{ laptop.price }}
+    {{ laptop.model }} 
   </span>
 </template>
   

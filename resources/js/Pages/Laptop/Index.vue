@@ -2,7 +2,9 @@
   <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
     <LaptopCard v-for="laptop in laptops" :key="laptop.id">
       <div>
-        <Link :href="route('laptop.show', laptop.id)"> <LaptopData :laptop="laptop" /></Link>
+        <Link :href="route('laptop.show', laptop.id)">
+          <LaptopData :laptop="laptop" class="text-lg" /> <LaptopSpec :laptop="laptop" class="text-gray-500" />
+        </Link>
       </div>
       <div>
         <Link :href="route('laptop.edit', {laptop: laptop.id})">Edit</Link>
@@ -18,8 +20,9 @@
 import { Link } from '@inertiajs/vue3'
 import LaptopData from '@/Components/LaptopData.vue'
 import LaptopCard from '@/Components/LaptopCard.vue'
+import LaptopSpec from '@/Components/LaptopSpec.vue'
 
 defineProps({
-  laptops: Array,
+  laptops: Object,
 })
 </script>
