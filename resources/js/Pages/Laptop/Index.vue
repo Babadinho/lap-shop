@@ -3,7 +3,7 @@
     <LaptopCard v-for="laptop in laptops" :key="laptop.id">
       <div>
         <Link :href="route('laptop.show', laptop.id)">
-          <LaptopData :laptop="laptop" class="text-lg" /> <LaptopSpec :laptop="laptop" class="text-gray-500" />
+          <LaptopData :laptop="laptop" class="text-lg font-bold" /> <LaptopSpec :laptop="laptop" class="text-gray-500" /> <Price :price="laptop.price" class="text-xl" />
         </Link>
       </div>
       <div>
@@ -21,6 +21,7 @@ import { Link } from '@inertiajs/vue3'
 import LaptopData from '@/Components/LaptopData.vue'
 import LaptopCard from '@/Components/LaptopCard.vue'
 import LaptopSpec from '@/Components/LaptopSpec.vue'
+import Price from '@/Components/Price.vue'
 
 defineProps({
   laptops: Object,
