@@ -15,7 +15,8 @@
         <template #header>
           Offer
         </template>
-        Make an offer
+        <input v-model.number="offer" class="shadow appearance-none border rounded w-full py-2 px-3 mb-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Make an offer" />
+        <button type="submit" class="button-dark">Submit</button>
       </Box>
     </div>
   </div>
@@ -27,6 +28,11 @@ import Box from '@/Components/Box.vue'
 import LaptopData from '@/Components/LaptopData.vue'
 import LaptopSpec from '@/Components/LaptopSpec.vue'
 import Price from '@/Components/Price.vue'
+
+import {ref} from 'vue'
+
+const offer = ref()
+
 defineProps({
   laptop: Object,
 })
